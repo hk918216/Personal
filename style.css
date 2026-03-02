@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at center, #111 0%, #000 100%);
+  font-family: 'Courier New', monospace;
+  color: #00ffcc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 385px;
+  padding: 30px;
+  border: 2px solid #00ffcc;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 20px #00ffcc;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+input {
+  width: 50%;
+  padding: 10px;
+  margin: 8px 0;
+  background: black;
+  border: 1px solid #00ffcc;
+  color: #00ffcc;
+  border-radius: 8px;
+}
+
+button {
+  width: 60%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #00ffcc;
+  border: none;
+  color: black;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ffcc;
+}
+
+.result {
+  margin-top: 20px;
+  font-size: 22px;
+  animation: blink 0.8s infinite alternate;
+}
+
+@keyframes blink {
+  from { opacity: 0.5; }
+  to { opacity: 1; }
+}

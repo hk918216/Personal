@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title> 선택 개수 고르기 </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <h1> 선택이 어려운 당신을 위해 </h1>
+    <h2> 선택지가 몇 개 인가요? </h2>
+    <input id="count" type="number" min="2" placeholder="2 이상 입력">
+    <button onclick="goNext()"> 다음 </button>
+
+    <script>
+        function goNext() {
+            const count = document.getElementById("count").value;
+
+            if(count <2 ){
+                alert("2개 이상 입력해주세요!");
+                return;
+            }
+            window.location.href = "choice.html?count=" + count;
+        }
+    </script>
+    </div>  
+</body>
+</html>

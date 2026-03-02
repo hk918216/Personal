@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title> 결과 페이지 </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <h1> 🎯 선택완료 </h1>
+    <h2 id="finalResult"></h2>
+
+    <button onclick="goBack()"> 다시하기 </button>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const result = params.get("result");
+
+        document.getElementById("finalResult").innerText = result;
+
+        function goBack() {
+            window.location.href = "index.html";
+        }
+    </script>
+    </div>
+</body>
+</html>
