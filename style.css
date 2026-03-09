@@ -1,0 +1,148 @@
+body{
+font-family: Arial, sans-serif;
+background:#f4f6fb;
+margin:0;
+padding:30px;
+}
+
+h1{
+text-align:center;
+margin-bottom:10px;
+}
+
+#movieCount{
+text-align:center;
+color:#666;
+margin-bottom:30px;
+}
+
+/* 필터 박스 */
+
+.controls{
+display:flex;
+gap:20px;
+justify-content:center;
+align-items:center;
+background:white;
+padding:15px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.05);
+margin-bottom:30px;
+flex-wrap:wrap;
+}
+
+.controls label{
+font-weight:bold;
+}
+
+.controls select,
+.controls input{
+padding:5px 8px;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+/* 그래프 */
+
+.container{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+margin-bottom:30px;
+}
+
+.chart-box{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.05);
+}
+
+.chart-box h2{
+margin-top:0;
+text-align:center;
+}
+
+/* TOP 영화 */
+
+.top-movies{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.05);
+max-width:600px;
+margin:auto;
+}
+
+#topMovies{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+padding:0;
+list-style:none;
+}
+
+#topMovies li{
+background:white;
+padding:12px;
+border-radius:8px;
+box-shadow:0 3px 8px rgba(0,0,0,0.1);
+transition:0.2s;
+}
+
+#topMovies li:hover{
+transform:translateY(-3px);
+background:#eef4ff;
+}
+
+/*다크모드*/
+.dark-mode{
+background:#1e1e1e;
+color:white;
+}
+
+.dark-mode .chart-box,
+.dark-mode .controls,
+.dark-mode .top-movies{
+background:#2b2b2b;
+color:white;
+}
+
+#darkModeToggle{
+display:block;
+margin:10px auto;
+padding:8px 15px;
+border:none;
+border-radius:6px;
+background:#333;
+color:white;
+cursor:pointer;
+}
+.dark-mode .movie-card{
+background:#2b2b2b;
+color:white;
+}
+
+.dark-mode .movie-title{
+color:white;
+}
+
+.dark-mode .movie-rating{
+color:#ffd54f;
+}
+
+.dark-mode .movie-year{
+color:#ccc;
+}
+
+.dark-mode #topMovies li:hover{
+background:#3a3a3a;
+}
+body.dark-mode #topMovies li{
+background:#2b2b2b;
+color:white;
+}
+
+body.dark-mode #topMovies li:hover{
+background:#3a3a3a;
+}
